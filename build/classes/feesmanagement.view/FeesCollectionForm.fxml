@@ -15,11 +15,11 @@ and open the template in the editor.
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root id="AnchorPane" prefHeight="477.0" prefWidth="680.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root id="rootPane" prefHeight="477.0" prefWidth="680.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="feesmanagement.view.FeesCollectionFormController">
    <children>
       <BorderPane layoutX="326.0" layoutY="132.0" prefHeight="477.0" prefWidth="680.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
-            <GridPane hgap="25.0" BorderPane.alignment="CENTER">
+            <GridPane id="feeType" hgap="25.0" BorderPane.alignment="CENTER">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -33,27 +33,27 @@ and open the template in the editor.
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <JFXTextField fx:id="studentid" labelFloat="true" prefHeight="43.0" prefWidth="227.0" promptText="Student ID">
+                  <JFXTextField id="StudentID" fx:id="studentid" labelFloat="true" prefHeight="43.0" prefWidth="227.0" promptText="Student ID">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="studentid1" labelFloat="true" layoutX="10.0" layoutY="99.0" prefHeight="43.0" prefWidth="227.0" promptText="Term" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <JFXTextField id="Term" fx:id="studentid1" labelFloat="true" layoutX="10.0" layoutY="99.0" prefHeight="43.0" prefWidth="227.0" promptText="Term" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="studentid11" labelFloat="true" layoutX="10.0" layoutY="179.0" prefHeight="43.0" prefWidth="227.0" promptText="First Name" GridPane.columnIndex="1">
+                  <JFXTextField id="firstName" fx:id="studentid11" labelFloat="true" layoutX="10.0" layoutY="179.0" prefHeight="43.0" prefWidth="227.0" promptText="First Name" GridPane.columnIndex="1">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="studentid12" labelFloat="true" layoutX="10.0" layoutY="179.0" prefHeight="43.0" prefWidth="227.0" promptText="Recieved BY" GridPane.rowIndex="2">
+                  <JFXTextField id="recievedBy" fx:id="studentid12" labelFloat="true" layoutX="10.0" layoutY="179.0" prefHeight="43.0" prefWidth="227.0" promptText="Recieved BY" GridPane.rowIndex="2">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="studentid121" labelFloat="true" layoutX="10.0" layoutY="258.0" prefHeight="43.0" prefWidth="226.0" promptText="Last Name" GridPane.columnIndex="2">
+                  <JFXTextField id="lastName" fx:id="studentid121" labelFloat="true" layoutX="10.0" layoutY="258.0" prefHeight="43.0" prefWidth="226.0" promptText="Last Name" GridPane.columnIndex="2">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -61,19 +61,19 @@ and open the template in the editor.
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </JFXTextField>
-                  <DatePicker prefHeight="43.0" prefWidth="227.0" promptText="Date Paid" showWeekNumbers="true" GridPane.rowIndex="1" />
-                  <JFXTextField fx:id="studentid2" labelFloat="true" layoutX="10.0" layoutY="99.0" prefHeight="43.0" prefWidth="227.0" promptText="Class" GridPane.rowIndex="3">
+                  <DatePicker id="datePaid" prefHeight="43.0" prefWidth="227.0" promptText="Date Paid" showWeekNumbers="true" GridPane.rowIndex="1" />
+                  <JFXTextField id="class" fx:id="studentid2" labelFloat="true" layoutX="10.0" layoutY="99.0" prefHeight="43.0" prefWidth="227.0" promptText="Class" GridPane.rowIndex="3">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </JFXTextField>
-                  <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="120.0" style="-fx-background-color: dodgerblue; -fx-background-radius: 40;" text="save" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <Button id="saveCollectedFees" fx:id="saveCollectedFees" mnemonicParsing="false" prefHeight="47.0" prefWidth="120.0" style="-fx-background-color: dodgerblue; -fx-background-radius: 40;" text="save" GridPane.columnIndex="2" GridPane.rowIndex="4">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <JFXComboBox labelFloat="true" prefHeight="43.0" prefWidth="227.0" promptText="Fee Type" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <JFXTextField fx:id="studentid13" labelFloat="true" layoutX="239.0" layoutY="191.0" prefHeight="43.0" prefWidth="227.0" promptText="Amount Recieved" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <JFXComboBox id="feeType" labelFloat="true" prefHeight="43.0" prefWidth="227.0" promptText="Fee Type" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXTextField id="amountRecieved" fx:id="studentid13" labelFloat="true" layoutX="239.0" layoutY="191.0" prefHeight="43.0" prefWidth="227.0" promptText="Amount Recieved" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <font>
                         <Font size="14.0" />
                      </font>
