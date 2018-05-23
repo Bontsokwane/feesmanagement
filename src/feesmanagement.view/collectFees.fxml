@@ -89,7 +89,7 @@ and open the template in the editor.
                <children>
                   <Label prefHeight="54.0" prefWidth="248.0" text="Fees Collection Form" textFill="#0a598c">
                      <font>
-                        <Font size="24.0" />
+                        <Font name="Britannic Bold" size="24.0" />
                      </font>
                   </Label>
                </children>

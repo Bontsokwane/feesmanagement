@@ -15,9 +15,9 @@
 <AnchorPane id="AnchorPane" prefHeight="541.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="feesmanagement.FXMLDocumentController">
     <children>
       <JFXNodesList />
-      <BorderPane layoutX="3.0" layoutY="3.0" prefHeight="534.0" prefWidth="620.0">
+      <BorderPane layoutX="3.0" layoutY="3.0" prefHeight="541.0" prefWidth="626.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
-            <JFXTabPane prefHeight="491.0" prefWidth="575.0" stylesheets="@resources/mystyle.css" BorderPane.alignment="CENTER">
+            <JFXTabPane stylesheets="@resources/mystyle.css" BorderPane.alignment="CENTER">
                <tabs>
                   <Tab text="Define Fee Types">
                      <content>
